@@ -7,16 +7,16 @@
     <h1>Привет, <span id="name-output">незнакомец</span>!</h1> */
 // ====1
 
-// let input = document.getElementById("name-input");
-// let nameOutput = document.getElementById("name-output");
+let input = document.getElementById("name-input");
+let nameOutput = document.getElementById("name-output");
 
-// input.oninput = function () {
-//   if (input.value === '') {
-//     nameOutput.innerHTML = 'Anonymous';
-//   } else {
-//     nameOutput.innerHTML = input.value;
-//   }
-// };
+input.oninput = function () {
+  if (input.value === "") {
+    nameOutput.innerHTML = "Anonymous";
+  } else {
+    nameOutput.innerHTML = input.value;
+  }
+};
 
 // ====2
 
@@ -31,18 +31,19 @@
 //     outputName.textContent = ev.currentTarget.value;
 //   }
 // };
-// inputName.addEventListener("keydown", addNewName);
+// inputName.addEventListener("input", addNewName);
 
 // ====3
 
-let inputEl = document.querySelector("#name-input");
-inputEl.addEventListener("input", onInputChange);
+// let inputEl = document.querySelector("#name-input");
+// inputEl.addEventListener("input", onInputChange);
 
-let outputEl = document.querySelector("#name-output");
+// let outputEl = document.querySelector("#name-output");
 
-function onInputChange(event) {
-  inputEl = event.currentTarget.value;
-  console.log(inputEl);
+// function onInputChange(event) {
+//   inputEl = event.currentTarget.value;
+//   console.log(inputEl);
 
-  inputEl !== " " ? (outputEl.innerText = inputEl.trim()) : "Anonymous";
-}
+//   inputEl !== " " ? (outputEl.innerText = inputEl.trim()) : "Anonymous";
+
+// }
